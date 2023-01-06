@@ -113,3 +113,12 @@ class TupleTorpedoGame:
             if "S" in row:
                 return False
         return True
+
+    def check_win_computer(self):
+        """
+        Check if the computer has won the game
+        """
+        for row in self.player_board:
+            if "S" in row:
+                return False
+        return True
