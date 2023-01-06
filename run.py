@@ -152,7 +152,7 @@ def main():
     """
     Main function which initializes the game loop
     """
-    print("Welcome to The Tuple Torpedo \nA Python CLI Battleships game")
+    print("-----------------------------\nWelcome to The Tuple Torpedo\nA Python CLI Battleships game\nS == Ship, X == Hit, M == Miss")
 
     play = input("Would you like to play a game of battleships? Yes or No?")
     while play.lower() != "y" and play.lower() != "yes":
@@ -175,6 +175,14 @@ def main():
         print(f"\nHello Captain {name}, let's blow the enemy out of the water.")
     elif difficulty == "Admiral":
         print(f"\nHello Admiral {name}, it is an honour to be working with you sir")
+
+    
+    # Create instance of game using difficulty level selected
+    game = TupleTorpedo(difficulty)
+    game.create_player_board()
+    game.create_computer_board()
+    game.place_ships_player()
+    game.place_ships_computer()
 
 main()
 
