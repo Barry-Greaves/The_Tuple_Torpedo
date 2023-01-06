@@ -148,6 +148,7 @@ class TupleTorpedoGame:
 
 valid_ranks = ["Rookie", "Lieutenant", "Commander", "Captain", "Admiral"]
 hit_statements = ["Direct hit! You sunk the enemey's battleship", "Success! You incinerated their ship", "The enemy is running scared, you destroyed their battleship!"]
+miss_statements = ["Bad shot! We don't have unlimited ammo. Get it together!", "Missed again. Well the next one better hit, we will be in real trouble soon", "Uh oh, that one was way off. It's ok it happens to the best of us, try to actually aim next time", "That was so close, we will get them next time"]
 
 def main():
     """
@@ -209,11 +210,11 @@ def main():
         if game.check_shot_player(row, col):
             print(random.choice(hit_statements))
         else:
-            print("Miss!")
+            print(random.choice(miss_statements))
 
         #Check if the game has been won
         if game.check_win_player():
-            print("You win!")
+            print("You are the Tuple Torpedo Champion!")
             break
         
         #Wait a moment for the torpedo to land, or not ....     
@@ -225,9 +226,9 @@ def main():
         #Check if the computer's shot has landed
         row, col = game.computers_turn()
         if game.check_shot_computer(row, col):
-            print("The enemy hit your ship at {} {}!".format(row, col))
+            print("The enemy hit your ship at {}, {}!".format(row, col))
         else:
-            print("The enemy missed your ship at {} {}.Now its time to take them out!".format(row, col))
+            print("The enemy missed your ship at {}, {}. Now its time to take them out!".format(row, col))
 
         timer = ["................\n\n"]
         for dots in timer: 
