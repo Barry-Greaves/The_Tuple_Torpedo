@@ -21,3 +21,19 @@ Tuple Torpedo offers five difficulty levels, each with a different board size an
 - Captain: 12x12 board, 12 ships
 - Admiral: 16x16 board, 16 ships
 
+## Notes
+
+The game does not currently support two player mode.
+The game does not have any way to save progress, so once a game is over it cannot be resumed.
+
+## Bugs
+
+If the user enters letters for their coordinates it creates an error. I could not implement the is alpha method correctly into the loop and unfortunately this is still an issue. 
+
+## Future Plans
+
+- Fix the outstanding bug outlined abouve. 
+- Add support for two player mode.
+- Add the ability to save and resume games.
+- Add more customization options, such as allowing players to choose the size and placement of their ships.
+
