@@ -129,6 +129,14 @@ class TupleTorpedoGame:
         """
         for row in self.player_board:
             print(" ".join(row))
+
+    def print_computer_board(self):
+        """
+        Prints computer's board to CLI
+        """
+        print("\nThe enemy's board:")
+        for row in self.computer_board:
+            print(" ".join(row))
     
     def computers_turn(self):
         """
