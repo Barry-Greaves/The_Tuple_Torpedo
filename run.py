@@ -156,9 +156,9 @@ def main():
     """
     print("-----------------------------\nWelcome to The Tuple Torpedo\nA Python CLI Battleships game\nS == Ship, X == Hit, M == Miss\n-----------------------------")
 
-    play = input("\nWould you like to play a game of battleships? Yes or No?")
+    play = input("\nWould you like to play a The Tuple Torpedo? Yes or No?")
     while play.lower() != "y" and play.lower() != "yes":
-        play = input("Come on don't be a coward. Shall we play some battleships? Yes or No?")
+        play = input("Come on don't be a coward. The Tuple Torpedo awaits. What say you? Yes or No?")
     
     name = input("\nEnter your name: ")
     
