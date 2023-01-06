@@ -1,6 +1,6 @@
 import random
 
-class TupleTorpedo:
+class TupleTorpedoGame:
     """
     Contruct game class that defines difficulty level,
     board size and number of ships
@@ -14,3 +14,8 @@ class TupleTorpedo:
         self.hidden_computer_board = []
         self.player_ships = []
         self.computer_ships = []
+
+        self.create_player_board()
+        self.place_ships_player()
+        self.create_computer_board()
+        self.place_ships_computer()
