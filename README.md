@@ -1,6 +1,6 @@
 # The Tuple Torpedo
 
-The Tuple Torpedo is a Python based battleships game the players an computer take turns trying to sink each other's ships. The game is played on square grids, with a number of ships placed on each grid.The first player to sink all of the other player's ships wins the game.
+The Tuple Torpedo is a Python based battleships game where the player and computer take turns in trying to sink each other's ship. The game is played on square grids, with a number of ships placed on each grid.The first to sink all of the other player's ships wins the game.
 
 ![tuple_tornado](https://user-images.githubusercontent.com/107034179/210928143-23ae2b0a-3190-49c2-bb82-bbc322d559cf.png)
 
@@ -9,7 +9,7 @@ Deployed app: https://the-tuple-torpedo.herokuapp.com/
 ## How to Play
 To start the game, select yes when asked if you want to play and follow the prompts to select a rank level.
 
-Once the game has started, you will be shown your own board and the computer's board. You will then be asked to enter coordinates for your shot. .
+Once the game has started, you will be shown your own board and the computer's board. You will then be asked to enter coordinates for your shot. 
 
 If your shot hits one of the computer's ships, you will be told that you hit a ship and you will get to take another turn. If your shot misses, the computer will take its turn.
 
