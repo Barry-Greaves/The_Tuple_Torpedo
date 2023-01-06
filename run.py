@@ -51,3 +51,17 @@ class TupleTorpedoGame:
         for i in range(self.board_size):
             self.computer_board.append(["."] * self.board_size)
             self.hidden_computer_board.append(["."] * self.board_size)
+    
+    def place_ships_player(self):
+        """
+        Place ships on the player's board"
+        """
+        for i in range(self.num_ships):
+            placed = False
+            while not placed:
+                row = random.randint(0, self.board_size - 1)
+                col = random.randint(0, self.board_size - 1)
+                if self.player_board[row][col] == ".":
+                    self.player_ships.append((row, col))
+                    self.player_board[row][col] = "S"
+                    placed = True
