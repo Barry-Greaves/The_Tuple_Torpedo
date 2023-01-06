@@ -149,8 +149,8 @@ class TupleTorpedoGame:
 
 
 valid_ranks = ["Rookie", "Lieutenant", "Commander", "Captain", "Admiral"]
-hit_statements = ["Direct hit! You sunk the enemey's battleship", "Success! You incinerated their ship", "The enemy is running scared, you destroyed their battleship!" "Wow you are like the Navy version of Tom Cruise in Top Gun. What a great shot" "How did you make that one? The enemy can't take many more hits like that!"]
-miss_statements = ["Bad shot! We don't have unlimited ammo. Get it together!", "Missed again. Well the next one better hit, we will be in real trouble soon", "Uh oh, that one was way off. It's ok it happens to the best of us, try to actually aim next time", "That was so close, we will get them next time"]
+hit_statements = ["Direct hit! You sunk the enemey's battleship", "Success! You incinerated their ship", "The enemy is running scared, you destroyed their battleship!", "Wow you are a torpedo machine! What a great shot", "Bullseye! The enemy can't take many more hits like that!"]
+miss_statements = ["Bad shot! We don't have unlimited ammo. Get it together!", "Well the next one better hit, we will be in real trouble soon", "Uh oh, that one was way off. It's ok it happens to the best of us", "That was so close, we will get them next time", "Focus! We can't keep missing like that"]
 
 
 def main():
