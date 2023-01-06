@@ -12,8 +12,20 @@ If your shot hits one of the computer's ships, you will be told that you hit a s
 
 The game continues until one player sinks all of the other player's ships, at which point the game will end and the winner will be announced.
 
-## Difficulty Levels
-Tuple Torpedo offers five difficulty levels, each with a different board size and number of ships:
+## Features
+
+### Difficulty Levels
+
+Tuple Torpedo offers five difficulty levels. The user is asked to select their rank which assigns a difficulty level
+
+![Screen Shot 2023-01-06 at 03 34 30](https://user-images.githubusercontent.com/107034179/210924942-b4056288-505c-4a68-a846-f640ca29c132.png)
+
+
+### Board Sizes 
+
+Based on the users rank they are assigned a different board size from 4X4 for Rookies all the way up to 16X16 for the mighty Admirals.
+
+![Screen Shot 2023-01-06 at 03 39 52](https://user-images.githubusercontent.com/107034179/210925350-30e9fd20-cf46-4795-8835-3288c0727010.png)
 
 - Rookie: 4x4 board, 4 ships
 - Lieutenant: 6x6 board, 6 ships
@@ -23,8 +35,30 @@ Tuple Torpedo offers five difficulty levels, each with a different board size an
 
 ## Notes
 
-The game does not currently support two player mode.
-The game does not have any way to save progress, so once a game is over it cannot be resumed.
+- The game does not currently support two player mode.
+- The game does not have any way to save progress, so once a game is over it cannot be resumed.
+- The Admiral level board is a little to big to provide a good user experience as they cannot view both boards at once. This does add to the difficulty level, but anyone who assigns themselves the rank of Admiral should be able to handle it. 
+
+## Generative Messages
+
+There are several points in Tuple Torpedo where the user will receive different messages depending on the state of the game. Some examples include:
+
+- If the user selects that they do not want to play they will receive 
+- When the user selects their difficulty level, they will receive a different message depending on their choice using an if/elif statement
+- When the user takes a turn, they will receive a message telling them whether their shot hit or missed.
+- If the user sinks or misses one of the computer's ships, they will receive one of many possible different messages generated using the print random choice function which selects a random print statement from a list.
+- If the user loses the game, they will receive a message telling them that they lost and the game will end.
+- If the user wins the game, they will receive a message telling them that they won and the game will end.
+
+![Screen Shot 2023-01-06 at 03 50 38](https://user-images.githubusercontent.com/107034179/210926440-97005589-8a02-48c3-a92d-3b9292958632.png)
+
+![Screen Shot 2023-01-06 at 03 53 28](https://user-images.githubusercontent.com/107034179/210926865-4a0b7ac8-55ea-49e8-b42d-decebc2c367f.png)
+
+![Screen Shot 2023-01-06 at 03 53 05](https://user-images.githubusercontent.com/107034179/210926867-95cc9ad0-cba8-4c58-87c9-2003140c3bbe.png)
+
+![Screen Shot 2023-01-06 at 03 50 14](https://user-images.githubusercontent.com/107034179/210926930-05d30b3c-2a13-48cd-83fe-c48c654c2fe3.png)
+
+These messages are displayed using the print function and are intended to inform the user of the current state of the game and what their next steps should be.
 
 ## Bugs
 
