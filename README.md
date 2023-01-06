@@ -106,9 +106,25 @@ If the user enters letters for their coordinates it creates an error. I could no
 - Add the ability to save and resume games.
 - Add more customization options, such as allowing players to choose the size and placement of their ships.
 
+## Deployment
+
+The Tuple Torpedo was deplyed to Heroku using the Code Institute's Python Template and mock terminal in Heroku. 
+
+To deply this project:
+
+- Sign up for a Heroku account and install the Heroku CLI on your computer.
+- Create a new Heroku app and link it to a Git repository.
+- Create a requirements.txt file to specify the required Python packages for your app.
+- Commit and push your code to the Git repository linked to your Heroku app.
+- In the Heroku dashboard, navigate to the Deploy tab and select the repository you want to deploy.
+- Under Deployment method, select Git and click the Deploy Branch button.
+- After the deployment is complete, click the View button to open the app in your browser. 
+
 ## Credits
 
 [Code Institute Python Essentials](codeinstitute.net)
+
+[W3 Schools](https://www.w3schools.com/python/ref_random_choices.asp)
 
 More concepts were learnt in [Python Intermediate Project Assignment: Learn How to make Battleships](https://www.youtube.com/watch?v=MgJBgnsDcF0&t=236s)
 
