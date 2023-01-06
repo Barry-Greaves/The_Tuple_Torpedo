@@ -94,7 +94,7 @@ class TupleTorpedoGame:
 
     def check_shot_computer(self, row, col):
         """
-        Check if the player's shot has hit one of the computer's battleships
+        Check if the computer's shot has hit one of the computer's battleships
         """
         if (row, col) in self.player_ships:
             self.computer_board[row][col] = "X"
@@ -104,3 +104,12 @@ class TupleTorpedoGame:
             self.computer_board[row][col] = "M"
             self.hidden_computer_board[row][col] = "X"
             return False
+
+    def check_win_player(self):
+        """
+        Check if the player has won the game
+        """
+        for row in self.hidden_computer_board:
+            if "S" in row:
+                return False
+        return True
