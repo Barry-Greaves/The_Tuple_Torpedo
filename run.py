@@ -162,7 +162,7 @@ def main():
     
     name = input("\nEnter your name: ")
     
-    difficulty = input("Please select your rank: Rookie, Lieutenant, Commander, Captain or Admiral: ")
+    difficulty = input("Select your rank: Rookie, Lieutenant, Commander, Captain or Admiral: ")
     while difficulty not in valid_ranks:
         print("Select your rank from the list provided. You must be a rookie right?")
         difficulty = input("Please select your rank: Rookie, Lieutenant, Commander, Captain or Admiral: ")
