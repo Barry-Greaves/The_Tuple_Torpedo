@@ -1,4 +1,5 @@
 import random
+import time
 
 class TupleTorpedoGame:
     """
@@ -85,11 +86,12 @@ class TupleTorpedoGame:
         Check if the player's shot has hit one of the computer's battleships
         """
         if (row, col) in self.player_ships:
-            self.player_board[row][col] = "X"
+            self.computer_board[row][col] = "X"
+            self.hidden_computer_board[row][col] = "X"
             return True
         else:
-            self.player_board[row][col] = "M"
-         
+            self.computer_board[row][col] = "M"
+            self.hidden_computer_board[row][col] = "X"
             return False
 
     def check_shot_computer(self, row, col):
@@ -97,12 +99,10 @@ class TupleTorpedoGame:
         Check if the computer's shot has hit one of the computer's battleships
         """
         if (row, col) in self.player_ships:
-            self.computer_board[row][col] = "X"
-            self.hidden_computer_board[row][col] = "X"
+            self.player_board[row][col] = "X"
             return True
         else:
-            self.computer_board[row][col] = "M"
-            self.hidden_computer_board[row][col] = "X"
+            self.player_board[row][col] = "M" 
             return False
 
     def check_win_player(self):
@@ -147,6 +147,7 @@ class TupleTorpedoGame:
         return row, col
 
 valid_ranks = ["Rookie", "Lieutenant", "Commander", "Captain", "Admiral"]
+hit_statements = ["Direct hit! You sunk the enemey's battleship", "Success! You incinerated their ship", "The enemy is running scared, you destroyed their battleship!"]
 
 def main():
     """
@@ -160,10 +161,10 @@ def main():
     
     name = input("\nEnter your name: ")
     
-    difficulty = input("Please select your rank (Rookie, Lieutenant, Commander, Captain, Admiral): ")
+    difficulty = input("Please select your rank: Rookie, Lieutenant, Commander, Captain or Admiral: ")
     while difficulty not in valid_ranks:
         print("Select your rank from the list provided. You must be a rookie right?")
-        difficulty = input("Please select your rank (Rookie, Lieutenant, Commander, Captain, Admiral): ")
+        difficulty = input("Please select your rank: Rookie, Lieutenant, Commander, Captain or Admiral: ")
    
     if difficulty == "Rookie":
         print(f"\nHello Rookie {name}, don't mess this up.")
