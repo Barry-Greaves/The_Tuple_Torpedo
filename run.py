@@ -178,7 +178,7 @@ def main():
 
     
     # Create instance of game using difficulty level selected
-    game = TupleTorpedo(difficulty)
+    game = TupleTorpedoGame(difficulty)
     game.create_player_board()
     game.create_computer_board()
     game.place_ships_player()
@@ -205,7 +205,7 @@ def main():
             time.sleep( 1 )
         
         #Check if the player's shot has landed
-        if game.check_shot_computer(row, col):
+        if game.check_shot_player(row, col):
             print(random.choice(hit_statements))
         else:
             print("Miss!")
@@ -223,7 +223,7 @@ def main():
 
         #Check if the computer's shot has landed
         row, col = game.computers_turn()
-        if game.check_shot_player(row, col):
+        if game.check_shot_computer(row, col):
             print("The enemy hit your ship at {} {}!".format(row, col))
         else:
             print("The enemy missed your ship at {} {}.Now its time to take them out!".format(row, col))
