@@ -60,6 +60,18 @@ There are several points in Tuple Torpedo where the user will receive different 
 
 These messages are displayed using the print function and are intended to inform the user of the current state of the game and what their next steps should be.
 
+## Data Model
+
+The TupleTorpedoGame class uses several data structures to model the game state and store information about the player and computer boards, as well as the ships on each board.
+
+The player and computer boards are represented as lists of lists of strings, where each string represents a cell on the board. The value of each cell is either "." if the cell has not been attacked, "S" if it contains a ship, "M" if it was a missed shot, or "X" if it was a successful shot.
+
+The player and computer ships are represented as lists of tuples, where each tuple contains the (row, col) coordinates of a ship on the board.
+
+The game also keeps track of the difficulty level, board size, and number of ships for each game using instance variables.
+
+Overall, the TupleTorpedoGame class uses these data structures and variables to model the state of the game and store information about the player and computer boards and ships, as well as the current game settings. This information is used by the various methods in the class to update the game state and check for wins or losses
+
 ## Bugs
 
 If the user enters letters for their coordinates it creates an error. I could not implement the is alpha method correctly into the loop and unfortunately this is still an issue. 
