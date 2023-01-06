@@ -19,3 +19,19 @@ class TupleTorpedoGame:
         self.place_ships_player()
         self.create_computer_board()
         self.place_ships_computer()
+
+        if self.difficulty == "Rookie":
+            self.board_size = 4
+            self.num_ships = 4
+        elif self.difficulty == "Lieutenant":
+            self.board_size = 6
+            self.num_ships = 6
+        elif self.difficulty == "Commander":
+            self.board_size = 10
+            self.num_ships = 10
+        elif self.difficulty == "Captain":
+            self.board_size = 12
+            self.num_ships = 12
+        elif self.difficulty == "Admiral":
+            self.board_size = 16
+            self.num_ships = 16
