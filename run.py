@@ -129,4 +129,12 @@ class TupleTorpedoGame:
         """
         for row in self.player_board:
             print(" ".join(row))
+    
+    def computers_turn(self):
+        """
+        Creates a random shot for the computer to take at the player
+        """
+        row = random.randint(0, self.board_size - 1)
+        col = random.randint(0, self.board_size - 1)
+        return row, col
 
