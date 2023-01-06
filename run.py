@@ -198,5 +198,45 @@ def main():
             print("Invalid column. Please enter a valid column.")
             col = int(input("Enter column (0-{}): ".format(game.board_size - 1)))
 
+        #Wait a moment for the torpedo to land, or not ....       
+        timer = ["................\n\n"]
+        for dots in timer: 
+            print(dots, end='', flush=True) 
+            time.sleep( 1 )
+        
+        #Check if the player's shot has landed
+        if game.check_shot_computer(row, col):
+            print(random.choice(hit_statements))
+        else:
+            print("Miss!")
+
+        #Check if the game has been won
+        if game.check_win_player():
+            print("You win!")
+            break
+        
+        #Wait a moment for the torpedo to land, or not ....     
+        timer = ["................\n\n"]
+        for dots in timer: 
+            print(dots, end='', flush=True) 
+            time.sleep( 1 )
+
+        #Check if the computer's shot has landed
+        row, col = game.computers_turn()
+        if game.check_shot_player(row, col):
+            print("The enemy hit your ship at {} {}!".format(row, col))
+        else:
+            print("The enemy missed your ship at {} {}.Now its time to take them out!".format(row, col))
+
+        timer = ["................\n\n"]
+        for dots in timer: 
+            print(dots, end='', flush=True) 
+            time.sleep( 1 )
+        
+        #Check if the game has been won
+        if game.check_win_computer():
+            print("The enemy has defeated you!")
+            break
+
 main()
 
