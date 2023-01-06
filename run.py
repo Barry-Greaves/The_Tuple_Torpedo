@@ -122,3 +122,11 @@ class TupleTorpedoGame:
             if "S" in row:
                 return False
         return True
+
+    def print_player_board(self):
+        """
+        Prints player's board to CLI
+        """
+        for row in self.player_board:
+            print(" ".join(row))
+
