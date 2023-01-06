@@ -164,8 +164,8 @@ def main():
     
     difficulty = input("Select your rank: Rookie, Lieutenant, Commander, Captain or Admiral: ")
     while difficulty not in valid_ranks:
-        print("Select your rank from the list provided. You must be a rookie right?")
-        difficulty = input("Please select your rank: Rookie, Lieutenant, Commander, Captain or Admiral: ")
+        print("Select your rank from the list provided. You must be a rookie right?\nOnly rookies can't see it is case sensetive")
+        difficulty = input("Select your rank: Rookie, Lieutenant, Commander, Captain or Admiral: ")
    
     if difficulty == "Rookie":
         print(f"\nHello Rookie {name}, don't mess this up.")
