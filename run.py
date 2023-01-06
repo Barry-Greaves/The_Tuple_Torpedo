@@ -43,3 +43,11 @@ class TupleTorpedoGame:
         """
         for i in range(self.board_size):
             self.player_board.append(["."] * self.board_size)
+    
+    def create_computer_board(self):
+        """
+        Create battleships board for the computer
+        """
+        for i in range(self.board_size):
+            self.computer_board.append(["."] * self.board_size)
+            self.hidden_computer_board.append(["."] * self.board_size)
