@@ -146,3 +146,35 @@ class TupleTorpedoGame:
         col = random.randint(0, self.board_size - 1)
         return row, col
 
+valid_ranks = ["Rookie", "Lieutenant", "Commander", "Captain", "Admiral"]
+
+def main():
+    """
+    Main function which initializes the game loop
+    """
+    print("Welcome to The Tuple Torpedo \nA Python CLI Battleships game")
+
+    play = input("Would you like to play a game of battleships? Yes or No?")
+    while play.lower() != "y" and play.lower() != "yes":
+        play = input("Come on don't be a coward. Shall we play some battleships? Yes or No?")
+    
+    name = input("Enter your name: ")
+    
+    difficulty = input("Please select your rank (Rookie, Lieutenant, Commander, Captain, Admiral): ")
+    while difficulty not in valid_ranks:
+        print("Select your rank from the list provided. You must be a rookie right?")
+        difficulty = input("Please select your rank (Rookie, Lieutenant, Commander, Captain, Admiral): ")
+   
+    if difficulty == "Rookie":
+        print(f"\nHello Rookie {name}, don't mess this up.")
+    elif difficulty == "Lieutenant":
+        print(f"\nHello Lieutenant {name}, let's get locked and loaded.")
+    elif difficulty == "Commander":
+        print(f"\nHello Commander {name}, it is good to have you with us today, let's take em out!")
+    elif difficulty == "Captain":
+        print(f"\nHello Captain {name}, let's blow the enemy out of the water.")
+    elif difficulty == "Admiral":
+        print(f"\nHello Admiral {name}, it is an honour to be working with you sir")
+
+main()
+
