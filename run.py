@@ -19,7 +19,8 @@ class TupleTorpedoGame:
         self.place_ships_player()
         self.create_computer_board()
         self.place_ships_computer()
-
+        
+        #Changes board size based on difficulty level 
         if self.difficulty == "Rookie":
             self.board_size = 4
             self.num_ships = 4
@@ -35,3 +36,10 @@ class TupleTorpedoGame:
         elif self.difficulty == "Admiral":
             self.board_size = 16
             self.num_ships = 16
+
+    def create_player_board(self):
+        """
+        Create battleships board for the player
+        """
+        for i in range(self.board_size):
+            self.player_board.append(["."] * self.board_size)
