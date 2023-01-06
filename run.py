@@ -154,11 +154,11 @@ def main():
     """
     print("-----------------------------\nWelcome to The Tuple Torpedo\nA Python CLI Battleships game\nS == Ship, X == Hit, M == Miss")
 
-    play = input("Would you like to play a game of battleships? Yes or No?")
+    play = input("\nWould you like to play a game of battleships? Yes or No?")
     while play.lower() != "y" and play.lower() != "yes":
         play = input("Come on don't be a coward. Shall we play some battleships? Yes or No?")
     
-    name = input("Enter your name: ")
+    name = input("\nEnter your name: ")
     
     difficulty = input("Please select your rank (Rookie, Lieutenant, Commander, Captain, Admiral): ")
     while difficulty not in valid_ranks:
@@ -183,6 +183,20 @@ def main():
     game.create_computer_board()
     game.place_ships_player()
     game.place_ships_computer()
+
+    #Prompt user to take their turn
+    while True:
+        print(f"\n{difficulty} {name}'s board:")
+        game.print_player_board()
+        game.print_computer_board()
+        row = int(input("\nEnter coordinates for torpedo launch: row (0-{}): ".format(game.board_size - 1)))
+        while row < 0 or row >= game.board_size:
+            print("Invalid row. Please enter a valid row.")
+            row = int(input("Enter row (0-{}): ".format(game.board_size - 1)))
+        col = int(input("Enter coordinates for torpedo launch: column (0-{}): ".format(game.board_size - 1)))
+        while col < 0 or col >= game.board_size:
+            print("Invalid column. Please enter a valid column.")
+            col = int(input("Enter column (0-{}): ".format(game.board_size - 1)))
 
 main()
 
